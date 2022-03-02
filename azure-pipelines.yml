@@ -21,10 +21,10 @@ steps:
   displayName: 'npm install and build'
   
 pool:
-  vmImage: 'ubuntu-latest' # examples of other options: 'macOS-10.15', 'windows-latest'
-
+    vmImage: 'ubuntu-latest' # examples of other options: 'macOS-10.15', 'windows-latest'
+    
 - task: PublishTestResults@2
-  condition: succeededOrFailed()
-  inputs:
-    testRunner: JUnit
-    testResultsFiles: '**/test-results.xml'
+    condition: succeededOrFailed()
+    inputs:
+      testRunner: JUnit
+      testResultsFiles: '**/test-results.xml'
